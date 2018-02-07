@@ -5,6 +5,8 @@ var app = express()
 
 app.set('port', (process.env.PORT || 5000))
 
+const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+
 // Process application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
 
@@ -54,7 +56,7 @@ app.post('/webhook/', function (req, res) {
     res.sendStatus(200)
 })
 
-var token = "EAACLu2fti5kBAAty6FoWZAvljvzWZBUsFneoh4IphDdKZAS2ydwoKVWC9IyqwhaXQjO0BZCZCK1FoOTL8pz4S4Hdhvcv9q4Bt0P6hqsTjgCg7icKOZAqVs3XVNNRVSYyYrKvdC8AzGyDzZC7c1MIbGaZBbc1VMU8UuHLbLar40WncQZDZD"
+var token = "EAACLu2fti5kBADzFgjkjsKLl7GtbGZCUhl1kOgVki8Tipktcz8VzLN78nyvuhbCZCTbJGao5iiU3JwOOHkifYr7NB6WDpoItqEZABhjyGJydXNJLQoDw50ELIZCaEu2Pyhqm0ZBqG1O8SoJ6HlRX8LCPKzrLhE6skLuYZAOFiC3gZDZD"
 
 // function to echo back messages - added by Stefan
 
